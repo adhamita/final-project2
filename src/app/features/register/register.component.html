@@ -17,6 +17,44 @@
       <label
       [class.!text-red-500]="registerForm.get(item)?.touched && registerForm.get(item)?.errors"
       [for]="'floating'+item" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 bg-white px-1">   <span class="capitalize">{{item}}</span>      </label>
+      
+      <!-- Password Requirements Hint - Only show for password field -->
+      @if (item === 'password') {
+        <div class="mt-2 text-xs text-gray-600 bg-blue-50 p-3 rounded-lg border border-blue-200">
+          <p class="font-medium text-blue-800 mb-2 flex items-center">
+            <i class="fas fa-info-circle mr-2"></i>
+            Password Requirements:
+          </p>
+          <ul class="space-y-1 text-gray-700">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2 text-xs"></i>
+              At least 8 characters long
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2 text-xs"></i>
+              Include uppercase and lowercase letters
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2 text-xs"></i>
+              Include at least one number
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2 text-xs"></i>
+              Include at least one special character (!@#$%^&*)
+            </li>
+          </ul>
+        </div>
+      }
+      
+      <!-- Confirm Password Hint -->
+      @if (item === 'rePassword') {
+        <div class="mt-2 text-xs text-gray-600 bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+          <p class="font-medium text-yellow-800 flex items-center">
+            <i class="fas fa-exclamation-triangle mr-2"></i>
+            Please re-enter your password to confirm
+          </p>
+        </div>
+      }
   </div>
  
   
