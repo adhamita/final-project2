@@ -29,7 +29,7 @@ isLoading = false;
   });
   resetPasswordGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    newPassword: new FormControl("", [Validators.required, Validators.pattern(/^[A-Z][a-z@0-9]{5,10}$/)]),
+    newPassword: new FormControl("", [Validators.required, Validators.pattern(/^[A-Z][a-z0-9]{5,10}$/)]),
   });
 
 
