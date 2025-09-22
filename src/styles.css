@@ -14,3 +14,27 @@
 	--primary:green;
 	--trans-dur: 0.3s;
 }
+
+/* Ensure text visibility on all devices */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"] {
+  color: #1f2937 !important;
+  background-color: white !important;
+}
+
+  /* Mobile text visibility fixes */
+@media (max-width: 768px) {
+  input, textarea, select {
+    color: #1f2937 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #1f2937 !important;
+    -webkit-opacity: 1 !important;
+    opacity: 1 !important;
+  }  /* Fix for iOS Safari autocomplete */
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #1f2937 !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  }
+}
