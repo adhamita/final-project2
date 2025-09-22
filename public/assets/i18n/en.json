@@ -1,0 +1,33 @@
+{
+    "common": {
+    "welcome": "Welcome",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign Up",
+    "username": "Username",
+    "password": "Password",
+    "email": "Email",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "search": "Search",
+    "home": "Home",
+    "profile": "Profile",
+    "settings": "Settings",
+    "language": "Language",
+    "notifications": "Notifications",
+    "help": "Help",
+    "terms_of_service": "Terms of Service",
+    "privacy_policy": "Privacy Policy"
+    
+
+},
+"navbar": {
+    "home": "Home",
+    "cart": "Cart",
+    "products": "Products",
+    "categories": "Categories",
+    "brands": "Brands",
+    "login": "Login",
+    "register": "Register"
+}
+}

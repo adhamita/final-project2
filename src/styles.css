@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme{
+    --color-main : #39bb39
+}
+
+:root {
+	--hue: 223;
+	--bg: white;
+	--fg: green;
+	--primary:green;
+	--trans-dur: 0.3s;
+}
