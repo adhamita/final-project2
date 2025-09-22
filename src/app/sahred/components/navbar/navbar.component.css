@@ -27,7 +27,11 @@ nav::-webkit-scrollbar-thumb:hover {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   nav {
-    width: 12rem; /* w-48 smaller on mobile */
+    width: 4rem !important; /* w-16 very compact on mobile */
+  }
+  
+  nav:hover {
+    width: 4rem !important; /* Don't expand on mobile hover */
   }
 }
 
