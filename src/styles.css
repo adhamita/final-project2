@@ -21,20 +21,30 @@ input[type="email"],
 input[type="password"], 
 input[type="tel"] {
   color: #1f2937 !important;
-  background-color: white !important;
+  -webkit-text-fill-color: #1f2937 !important;
 }
 
-  /* Mobile text visibility fixes */
+/* Mobile text visibility fixes */
 @media (max-width: 768px) {
   input, textarea, select {
     color: #1f2937 !important;
-    background-color: white !important;
     -webkit-text-fill-color: #1f2937 !important;
     -webkit-opacity: 1 !important;
     opacity: 1 !important;
-  }  /* Fix for iOS Safari autocomplete */
+  }
+  
+  /* Fix for iOS Safari autocomplete - make it transparent */
   input:-webkit-autofill {
     -webkit-text-fill-color: #1f2937 !important;
-    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    background-color: transparent !important;
+  }
+  
+  /* Ensure floating labels are visible with white background */
+  .peer:focus ~ label,
+  .peer:not(:placeholder-shown) ~ label {
+    background-color: white;
+    padding: 0 4px;
+    z-index: 10;
   }
 }
